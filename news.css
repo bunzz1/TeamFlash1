@@ -1,0 +1,374 @@
+ header {
+  background: var(--dark);
+  border-bottom: 1px solid var(--border-dark);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary);
+  min-width: 100px;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  flex: 1;
+  justify-content: center;
+}
+
+nav a {
+  color: var(--light-text);
+  text-decoration: none;
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+.header-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.header-icons span {
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.header-icons span:hover {
+  color: var(--primary);
+}
+
+.flag {
+  font-size: 18px;
+}
+
+ 
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 20px 'Be VietNam Pro Bold';
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .title-page {
+            text-align: center;
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+
+        .news-layout {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 40px;
+        }
+
+        /* LEFT SIDE */
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .news-item {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 25px;
+        }
+
+        .news-item h2 {
+            font-size: 30px;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .meta {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 12px;
+        }
+
+        .desc {
+            font-size: 15px;
+            color: #ddd;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border: 1px solid #fff;
+            padding: 6px 14px;
+            transition: 0.3s;
+        }
+
+        .read-more:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* RIGHT SIDE */
+        /* CỘT ẢNH BÊN PHẢI */
+.featured {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* KHUNG ẢNH */
+.featured-item {
+  width: 100%;
+  height: 280px;              /* 👈 TẤT CẢ ẢNH CAO BẰNG NHAU */
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* ẢNH TỰ CẮT CHO VỪA KHUNG */
+.featured-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* 👈 QUAN TRỌNG: ảnh đầy khung không méo */
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.featured-item:hover img {
+  transform: scale(1.05);
+}
+
+
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .container {
+                width: 90%;
+            }
+
+            .news-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+
+/* Partners Section */
+.partners-section {
+  margin-bottom: 80px;
+  text-align: center;
+  padding: 60px 40px;
+  background: var(--dark-gray);
+  border-radius: 8px;
+}
+
+.partners-section h2 {
+  font-size: 28px;
+  color: var(--light-text);
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+.partner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  opacity: 0.8;
+  transition: var(--transition);
+}
+
+.partner-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.partner-logo:hover {
+  opacity: 1;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: var(--light-text);
+  padding: 60px 40px 0;
+  border-top: 1px solid var(--border-dark);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h4 {
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.about-us {
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.footer-logo {
+  font-size: 0;
+  color: var(--primary);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-logo img {
+  max-height: 40px;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-us p {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: var(--light-text);
+  text-decoration: none;
+  font-size: 12px;
+  opacity: 0.8;
+  transition: var(--transition);
+}
+
+.footer-section a:hover {
+  color: var(--primary);
+  opacity: 1;
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.newsletter input {
+  padding: 10px;
+  background: var(--darker-gray);
+  border: 1px solid var(--border-dark);
+  color: var(--light-text);
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.newsletter input::placeholder {
+  color: var(--text-dim);
+}
+
+.newsletter button {
+  padding: 10px;
+  background: var(--primary);
+  border: none;
+  color: var(--dark);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12px;
+  transition: var(--transition);
+}
+
+.newsletter button:hover {
+  background: var(--primary-light);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.social-icons i {
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.social-icons i:hover {
+  color: var(--primary);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border-dark);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.bct-logo {
+  height: 40px;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 15px;
+  font-weight: bold;
+}
