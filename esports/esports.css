@@ -123,7 +123,16 @@ main h1 {
     height: 450px;
     display: block;
     object-fit: cover;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.team-member-card > a {
+    display: block;
+    overflow: hidden;
+}
+
+.team-member-card > a:hover .member-photo {
+    transform: scale(1.05);
 }
 
 .member-info-top {
